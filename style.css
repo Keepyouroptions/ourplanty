@@ -16,6 +16,7 @@
   --brass-orange:#D9A05B;
   --brass-orange-dark:#c98f45;
   --cloud-white:#F0F3F4;
+  --off-white-tint:#E4E7E8;
   /* sampled from the garden-tools photo's background tone */
   --picture-bg:#333B30;
 
@@ -79,8 +80,8 @@ a{ color:inherit; }
 .hero-credit:hover{ opacity:1; }
 .hero-credit .eyebrow{ margin-bottom:0; }
 .hero-credit-logo{
-  width:22px;
-  height:22px;
+  width:30px;
+  height:30px;
   border-radius:50%;
   flex-shrink:0;
 }
@@ -94,7 +95,6 @@ a{ color:inherit; }
   max-width:22ch;
   color:var(--deep-forest);
 }
-.section-heading-light{ color:var(--cloud-white); }
 
 .body-text{
   font-size:1.05rem;
@@ -102,7 +102,6 @@ a{ color:inherit; }
   max-width:68ch;
   color:var(--tool-steel);
 }
-.body-text-light{ color:rgba(240,243,244,0.88); }
 
 /* ---------- buttons ---------- */
 
@@ -142,7 +141,7 @@ a{ color:inherit; }
   position:sticky;
   top:0;
   z-index:100;
-  background:var(--tool-steel);
+  background:var(--deep-forest);
   border-bottom:1px solid rgba(240,243,244,0.08);
 }
 
@@ -164,22 +163,17 @@ a{ color:inherit; }
 }
 
 .nav-logo{
-  width:50px;
-  height:50px;
+  width:58px;
+  height:58px;
   flex-shrink:0;
 }
 
 .nav-wordmark{
   font-family:var(--font-display);
   font-weight:700;
-  font-size:1.15rem;
+  font-size:1.35rem;
   color:var(--cloud-white);
   letter-spacing:0.01em;
-}
-
-.wordmark-accent{
-  /* tint of the leaf mark's gradient green, lightened to clear contrast on the dark nav */
-  color:#92A797;
 }
 
 .nav-links{
@@ -221,7 +215,7 @@ a{ color:inherit; }
   display:none;
   flex-direction:column;
   gap:2px;
-  background:var(--tool-steel);
+  background:var(--deep-forest);
   padding:0 24px 20px;
 }
 .mobile-menu a{
@@ -273,9 +267,9 @@ a{ color:inherit; }
   font-family:var(--font-display);
   font-weight:700;
   font-size:clamp(2.6rem, 6vw, 4.6rem);
-  line-height:1.06;
+  line-height:1.08;
   margin:0 0 24px;
-  max-width:16ch;
+  max-width:19ch;
   margin-left:auto;
   margin-right:auto;
 }
@@ -307,8 +301,7 @@ a{ color:inherit; }
 }
 
 .section-light{ background:var(--cloud-white); color:var(--tool-steel); }
-.section-dark{ background:var(--tool-steel); color:var(--cloud-white); }
-.section-picture{ background:var(--picture-bg); color:var(--cloud-white); }
+.section-tint{ background:var(--off-white-tint); color:var(--tool-steel); }
 
 /* mission & vision */
 
@@ -324,7 +317,7 @@ a{ color:inherit; }
   font-family:var(--font-display);
   font-weight:600;
   font-size:1.4rem;
-  color:var(--brass-orange);
+  color:var(--deep-forest);
   margin:0 0 16px;
 }
 
@@ -341,7 +334,7 @@ a{ color:inherit; }
   position:relative;
   padding-left:26px;
   line-height:1.6;
-  color:rgba(240,243,244,0.9);
+  color:var(--tool-steel);
 }
 .bullet-list li::before{
   content:"";
@@ -350,7 +343,7 @@ a{ color:inherit; }
   top:0.55em;
   width:9px;
   height:9px;
-  background:var(--growth-green-light);
+  background:var(--growth-green);
   border-radius:2px;
 }
 
@@ -394,10 +387,12 @@ a{ color:inherit; }
 .help-card{
   max-width:640px;
   margin:0 auto;
-  background:rgba(240,243,244,0.04);
-  border:1px solid rgba(240,243,244,0.14);
+  background:#FFFFFF;
+  border:1px solid rgba(44,51,46,0.12);
+  border-left:4px solid var(--growth-green);
   border-radius:8px;
   padding:32px;
+  box-shadow:0 1px 3px rgba(20,27,21,0.06);
 }
 .help-card-head{
   display:flex;
@@ -411,35 +406,50 @@ a{ color:inherit; }
   font-weight:600;
   font-size:1.35rem;
   margin:0;
-  color:var(--cloud-white);
+  color:var(--deep-forest);
 }
 .help-card p{
-  color:rgba(240,243,244,0.85);
+  color:var(--tool-steel);
   line-height:1.65;
   margin:0 0 18px;
 }
 .support-link{
-  color:var(--brass-orange);
+  color:var(--growth-green);
   font-weight:700;
   text-decoration:none;
   font-size:0.95rem;
 }
 .support-link:hover{ text-decoration:underline; }
 
-.help-footnote{
+.help-footnote-credit{
+  display:flex;
+  align-items:center;
+  gap:12px;
   max-width:640px;
   margin:28px auto 0;
+  text-decoration:none;
+  color:rgba(44,51,46,0.75);
+  opacity:0.92;
+  transition:opacity 0.15s ease;
+}
+.help-footnote-credit:hover{ opacity:1; }
+.help-footnote-credit span{
   font-size:0.88rem;
   line-height:1.6;
-  color:rgba(240,243,244,0.6);
 }
-.help-footnote em{ color:var(--brass-orange); font-style:normal; }
+.help-footnote-credit strong{ color:var(--growth-green); font-weight:700; }
+.help-footnote-logo{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  flex-shrink:0;
+}
 
 /* closing */
 
 .closing{
-  background:var(--picture-bg);
-  color:var(--cloud-white);
+  background:var(--cloud-white);
+  color:var(--tool-steel);
   text-align:center;
   padding:var(--section-pad) 24px;
 }
@@ -448,23 +458,24 @@ a{ color:inherit; }
   font-weight:700;
   letter-spacing:0.22em;
   text-transform:uppercase;
-  color:var(--brass-orange);
+  color:var(--growth-green);
   margin:0 0 20px;
 }
 .closing-heading{
   font-family:var(--font-display);
   font-weight:600;
   font-size:clamp(1.8rem, 3.6vw, 2.8rem);
-  line-height:1.25;
-  max-width:26ch;
+  line-height:1.3;
+  max-width:38ch;
   margin:0 auto 36px;
+  color:var(--deep-forest);
 }
 .closing .hero-actions{ justify-content:center; }
 
 /* ---------- footer ---------- */
 
 .footer{
-  background:var(--tool-steel);
+  background:var(--deep-forest);
   color:rgba(240,243,244,0.7);
   text-align:center;
   padding:48px 24px;
@@ -498,8 +509,8 @@ a{ color:inherit; }
 }
 .footer-credit:hover{ opacity:1; }
 .footer-credit-logo{
-  width:20px;
-  height:20px;
+  width:28px;
+  height:28px;
   border-radius:50%;
   flex-shrink:0;
 }
