@@ -407,13 +407,29 @@ a{ color:inherit; }
   gap:16px;
   margin-bottom:16px;
 }
-.planty-mark{ width:40px; height:40px; flex-shrink:0; }
+.planty-mark{ width:24px; height:24px; }
+.icon-chip{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--deep-forest);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  text-decoration:none;
+  transition:transform 0.15s ease;
+}
+.icon-chip:hover{ transform:translateY(-2px); }
 .help-card-logo{
   width:40px;
   height:40px;
   border-radius:50%;
   flex-shrink:0;
+  object-fit:cover;
+  transition:transform 0.15s ease;
 }
+.help-card-head a:hover .help-card-logo{ transform:translateY(-2px); }
 .help-card-head h3{
   font-family:var(--font-display);
   font-weight:600;
@@ -474,10 +490,15 @@ a{ color:inherit; }
   text-align:center;
   padding:48px 24px;
 }
+.footer-logo-link{
+  display:inline-flex;
+  margin:0 auto 16px;
+  transition:transform 0.15s ease;
+}
+.footer-logo-link:hover{ transform:translateY(-2px); }
 .footer-logo{
   width:64px;
   height:64px;
-  margin:0 auto 16px;
 }
 .footer-wordmark{
   font-family:var(--font-display);
