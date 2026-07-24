@@ -18,7 +18,17 @@
 <header class="nav" id="top">
   <div class="nav-inner">
     <a href="#top" class="nav-brand">
-      <img src="assets/logo.png" alt="Our Planty" class="nav-logo">
+      <svg class="nav-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
+        <defs>
+          <linearGradient id="leafGrad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4a6d51" />
+            <stop offset="100%" stop-color="#2a3d2e" />
+          </linearGradient>
+        </defs>
+        <path d="M25 45L30 85H70L75 45H25Z" fill="url(#leafGrad-nav)" />
+        <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="#F0F3F4" stroke-width="4" stroke-linecap="square"/>
+        <rect x="48" y="45" width="4" height="30" fill="#141B15" opacity="0.3"/>
+      </svg>
       <span class="nav-wordmark">Our Planty</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -42,26 +52,15 @@
 <main>
 
   <section class="hero">
-    <div class="hero-watermark" aria-hidden="true">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 45L30 85H70L75 45H25Z" fill="currentColor"/>
-        <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="currentColor" stroke-width="3" stroke-linecap="square"/>
-      </svg>
-    </div>
     <div class="hero-inner">
       <p class="eyebrow eyebrow-light">An initiative of the Mountain and Sea Foundation</p>
       <h1 class="hero-headline">Unlock the Power of<br>Your Garden</h1>
       <p class="hero-sub">Our Planty is a vibrant online community for all gardeners, dedicated to helping you Unlock the Power of Your Garden.</p>
       <div class="hero-actions">
-        <a href="https://icosahedron-marlin-eale.squarespace.com/our-planty" class="btn btn-brass">Join Our Planty</a>
         <a href="#story" class="btn btn-ghost">Read Our Story</a>
       </div>
     </div>
   </section>
-
-  <figure class="image-band">
-    <img src="assets/hero-garden-tools.png" alt="Garden tools — trowel, shears, and a watering can — laid out on a dark green surface, with the words 'Unlock the Power of Your Garden'." loading="eager">
-  </figure>
 
   <section class="section section-light" id="story">
     <p class="eyebrow">Our Story</p>
@@ -142,7 +141,17 @@
 </main>
 
 <footer class="footer">
-  <img src="assets/logo.png" alt="Our Planty" class="footer-logo">
+  <svg class="footer-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
+    <defs>
+      <linearGradient id="leafGrad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4a6d51" />
+        <stop offset="100%" stop-color="#2a3d2e" />
+      </linearGradient>
+    </defs>
+    <path d="M25 45L30 85H70L75 45H25Z" fill="url(#leafGrad-footer)" />
+    <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="#F0F3F4" stroke-width="4" stroke-linecap="square"/>
+    <rect x="48" y="45" width="4" height="30" fill="#141B15" opacity="0.3"/>
+  </svg>
   <p class="footer-wordmark">Our Planty</p>
   <p class="footer-sub">A proud initiative of the Mountain and Sea Foundation.</p>
   <p class="footer-copy">&copy; <span id="year"></span> Our Planty. All rights reserved.</p>
