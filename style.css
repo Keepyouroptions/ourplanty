@@ -146,8 +146,8 @@ a{ color:inherit; }
 }
 
 .nav-logo{
-  width:36px;
-  height:36px;
+  width:50px;
+  height:50px;
   flex-shrink:0;
 }
 
@@ -221,18 +221,27 @@ a{ color:inherit; }
 .hero{
   position:relative;
   background-color:var(--picture-bg);
-  background-image:
-    linear-gradient(rgba(51,59,48,0.90), rgba(51,59,48,0.90)),
-    url('assets/hero-garden-tools.png');
-  background-size:cover;
-  background-position:center;
   color:var(--cloud-white);
   overflow:hidden;
   padding:clamp(72px, 12vw, 140px) 24px clamp(64px, 9vw, 110px);
 }
 
+.hero-bg-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(0.88);
+  opacity:0.16;
+  pointer-events:none;
+  user-select:none;
+}
+
 .hero-inner{
   position:relative;
+  z-index:1;
   max-width:760px;
   margin:0 auto;
   text-align:center;
@@ -277,6 +286,7 @@ a{ color:inherit; }
 
 .section-light{ background:var(--cloud-white); color:var(--tool-steel); }
 .section-dark{ background:var(--tool-steel); color:var(--cloud-white); }
+.section-picture{ background:var(--picture-bg); color:var(--cloud-white); }
 
 /* mission & vision */
 
@@ -438,8 +448,8 @@ a{ color:inherit; }
   padding:48px 24px;
 }
 .footer-logo{
-  width:42px;
-  height:42px;
+  width:64px;
+  height:64px;
   margin:0 auto 16px;
 }
 .footer-wordmark{
