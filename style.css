@@ -43,12 +43,6 @@ img{ max-width:100%; display:block; }
 
 a{ color:inherit; }
 
-.top-anchor{
-  display:block;
-  height:0;
-  width:0;
-}
-
 .skip-link{
   position:absolute; left:-999px; top:0;
   background:var(--brass-orange); color:var(--deep-forest);
