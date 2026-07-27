@@ -406,6 +406,7 @@ a{ color:inherit; }
   align-items:center;
   gap:16px;
   margin-bottom:16px;
+  min-height:60px;
 }
 .help-card-head > a{ flex-shrink:0; }
 .planty-mark{ width:60px; height:60px; flex-shrink:0; }
