@@ -403,7 +403,7 @@ a{ color:inherit; }
 }
 .help-card-head{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:16px;
   margin-bottom:16px;
   min-height:60px;
@@ -432,6 +432,7 @@ a{ color:inherit; }
   font-size:1.35rem;
   margin:0;
   color:var(--deep-forest);
+  align-self:center;
 }
 .help-card p{
   color:var(--tool-steel);
