@@ -445,12 +445,6 @@ a{ color:inherit; }
   font-size:0.95rem;
 }
 .support-link:hover{ text-decoration:underline; }
-.support-link-secondary{
-  display:block;
-  margin-top:8px;
-  color:var(--tool-steel);
-  font-weight:600;
-}
 
 @media (max-width:760px){
   .help-grid{ grid-template-columns:1fr; }
@@ -758,24 +752,16 @@ a{ color:inherit; }
 .tiers-sub{ margin-bottom:44px; }
 
 .tier-grid{
-  display:grid;
-  grid-template-columns:1fr;
+  display:flex;
+  flex-direction:column;
   gap:20px;
   max-width:var(--max-width);
   margin:0 auto;
 }
 
-@media (min-width:640px){
-  .tier-grid{ grid-template-columns:repeat(2, 1fr); }
-}
-@media (min-width:980px){
-  .tier-grid{ grid-template-columns:repeat(4, 1fr); }
-}
-
 .tier-card{
   background:#FFFFFF;
   border:1px solid rgba(44,51,46,0.12);
-  border-left:4px solid var(--tier-accent, var(--growth-green));
   border-radius:8px;
   padding:26px 24px;
   display:flex;
@@ -783,17 +769,12 @@ a{ color:inherit; }
   gap:12px;
 }
 
-.tier-card.tier-1{ --tier-accent:#A9BFAD; --tier-accent-text:#657368; }
-.tier-card.tier-2{ --tier-accent:var(--growth-green-light); --tier-accent-text:var(--growth-green-light); }
-.tier-card.tier-3{ --tier-accent:var(--growth-green); --tier-accent-text:var(--growth-green); }
-.tier-card.tier-4{ --tier-accent:var(--brass-orange); --tier-accent-text:#8d683b; }
-
 .tier-rank{
   font-size:0.75rem;
   letter-spacing:0.14em;
   text-transform:uppercase;
   font-weight:700;
-  color:var(--tier-accent-text, var(--brass-orange-dark));
+  color:var(--growth-green);
 }
 
 .tier-name{
@@ -834,7 +815,7 @@ a{ color:inherit; }
   width:7px;
   height:7px;
   border-radius:50%;
-  background:var(--tier-accent, var(--brass-orange));
+  background:var(--growth-green);
 }
 
 /* ---------- reduced motion ---------- */
