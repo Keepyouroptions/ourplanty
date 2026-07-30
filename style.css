@@ -771,9 +771,9 @@ a{ color:inherit; }
 }
 
 .tier-badge{
-  width:150px;
-  height:150px;
-  margin:6px auto 4px;
+  width:116px;
+  height:116px;
+  margin:10px auto 8px;
 }
 
 .tier-content{
@@ -790,7 +790,7 @@ a{ color:inherit; }
 }
 
 @media (max-width:420px){
-  .tier-badge{ width:130px; height:130px; }
+  .tier-badge{ width:96px; height:96px; }
 }
 
 .tier-rank{
