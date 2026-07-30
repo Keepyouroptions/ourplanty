@@ -741,18 +741,18 @@ a{ color:inherit; }
 .fee-callout .fee-amount{
   font-family:var(--font-display);
   font-weight:700;
-  font-size:1.6rem;
+  font-size:1.7rem;
   color:#976b34;
   flex-shrink:0;
 }
 .fee-callout p{
   margin:0;
   color:var(--tool-steel);
-  font-size:0.95rem;
+  font-size:1.05rem;
   max-width:34ch;
 }
 
-.tiers-sub{ margin-bottom:44px; }
+.tiers-sub{ margin-bottom:44px; font-size:1.12rem; }
 
 .tier-grid{
   display:flex;
@@ -771,9 +771,9 @@ a{ color:inherit; }
 }
 
 .tier-badge{
-  width:116px;
-  height:116px;
-  margin:10px auto 8px;
+  width:180px;
+  height:180px;
+  margin:4px auto 10px;
 }
 
 .tier-content{
@@ -790,11 +790,11 @@ a{ color:inherit; }
 }
 
 @media (max-width:420px){
-  .tier-badge{ width:96px; height:96px; }
+  .tier-badge{ width:140px; height:140px; }
 }
 
 .tier-rank{
-  font-size:0.75rem;
+  font-size:0.82rem;
   letter-spacing:0.14em;
   text-transform:uppercase;
   font-weight:700;
@@ -804,13 +804,13 @@ a{ color:inherit; }
 .tier-name{
   font-family:var(--font-display);
   font-weight:600;
-  font-size:1.3rem;
+  font-size:1.55rem;
   color:var(--deep-forest);
   margin:0;
 }
 
 .tier-requirement{
-  font-size:0.92rem;
+  font-size:1.05rem;
   color:var(--tool-steel);
   margin:0;
 }
@@ -825,7 +825,7 @@ a{ color:inherit; }
   gap:8px;
 }
 .tier-perks li{
-  font-size:0.9rem;
+  font-size:1rem;
   line-height:1.5;
   color:var(--tool-steel);
   padding-left:20px;
