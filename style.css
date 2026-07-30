@@ -766,46 +766,31 @@ a{ color:inherit; }
   background:#FFFFFF;
   border:1px solid rgba(44,51,46,0.12);
   border-radius:8px;
-  padding:32px 36px;
-  position:relative;
-  overflow:hidden;
+  padding:36px 32px;
+  text-align:center;
 }
 
-.tier-watermark{
-  position:absolute;
-  right:56px;
-  top:50%;
-  transform:translateY(-50%);
-  width:128px;
-  height:128px;
-  color:var(--growth-green);
-  opacity:0.22;
-  pointer-events:none;
+.tier-badge{
+  width:150px;
+  height:150px;
+  margin:6px auto 4px;
 }
 
 .tier-content{
-  position:relative;
-  z-index:1;
   display:flex;
   flex-direction:column;
+  align-items:center;
   gap:12px;
-  max-width:600px;
+  max-width:520px;
+  margin:0 auto;
 }
 
-@media (max-width:1000px){
-  .tier-watermark{
-    right:auto;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
-    width:150px;
-    height:150px;
-    opacity:0.06;
-  }
+.tier-perks{
+  text-align:left;
 }
 
 @media (max-width:420px){
-  .tier-watermark{ width:120px; height:120px; }
+  .tier-badge{ width:130px; height:130px; }
 }
 
 .tier-rank{
