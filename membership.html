@@ -19,16 +19,9 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="https://ourplanty.com" class="nav-brand">
-      <svg class="nav-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
-        <defs>
-          <linearGradient id="leafGrad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#4a6d51" />
-            <stop offset="100%" stop-color="#2a3d2e" />
-          </linearGradient>
-        </defs>
-        <path d="M25 45L30 85H70L75 45H25Z" fill="url(#leafGrad-nav)" />
-        <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="#F0F3F4" stroke-width="4" stroke-linecap="square"/>
-        <rect x="48" y="45" width="4" height="30" fill="#141B15" opacity="0.3"/>
+      <svg class="nav-logo" viewBox="0 0 320 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
+        <polygon points="36,132 284,132 236,285 84,285" fill="#3D5A43"/>
+        <path d="M 62 135 C 65 25, 255 25, 258 135" stroke="#D9A05B" stroke-width="8" fill="none"/>
       </svg>
       <span class="nav-wordmark">Our Planty</span>
     </a>
@@ -36,7 +29,7 @@
       <a href="index.html#story">Our Story</a>
       <a href="index.html#mission">Mission &amp; Vision</a>
       <a href="index.html#help">Ways to Help</a>
-      <a href="membership.html" aria-current="page">Membership</a>
+      <a href="membership.html" aria-current="page">Membership Tiers</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a href="https://icosahedron-marlin-eale.squarespace.com/our-planty" class="btn btn-brass nav-cta">Join Our Planty</a>
@@ -48,7 +41,7 @@
     <a href="index.html#story">Our Story</a>
     <a href="index.html#mission">Mission &amp; Vision</a>
     <a href="index.html#help">Ways to Help</a>
-    <a href="membership.html" aria-current="page">Membership</a>
+    <a href="membership.html" aria-current="page">Membership Tiers</a>
     <a href="contact.html">Contact</a>
     <a href="https://icosahedron-marlin-eale.squarespace.com/our-planty" class="btn btn-brass">Join Our Planty</a>
   </nav>
@@ -57,11 +50,10 @@
 <main>
 
   <section class="hero membership-hero">
-    <img src="assets/GardenTools.png" alt="" aria-hidden="true" class="hero-bg-img" loading="eager">
-    <div class="hero-inner">
+    <div class="hero-inner membership-hero-inner">
       <p class="eyebrow eyebrow-light">Our Planty Membership</p>
-      <h1 class="hero-headline contact-headline">Grow your standing the same way you grow your plants.</h1>
-      <p class="hero-sub">Every member starts as a Dirt Digger. From there, your rank rises with what you actually do on Our Planty — sales completed and growers you help along the way. No tier is for sale.</p>
+      <h1 class="hero-headline membership-headline">Grow your standing the same way you grow your plants.</h1>
+      <p class="hero-sub">Every member starts as a Dirt Digger. From there, your rank rises with what you actually do on Our Planty.</p>
 
       <div class="fee-callout">
         <span class="fee-amount">$15</span>
@@ -77,56 +69,105 @@
 
     <div class="tier-grid">
 
-      <article class="tier-card tier-1">
-        <span class="tier-rank">Tier 1</span>
-        <h3 class="tier-name">Dirt Digger</h3>
-        <p class="tier-requirement">Join with the <strong>one-time $15 fee</strong></p>
-        <ul class="tier-perks">
-          <li>List and sell on Our Planty</li>
-          <li>Access to grower guides and resources</li>
-        </ul>
+      <article class="tier-card">
+        <svg class="tier-watermark" viewBox="0 0 140 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M50 20 L90 20 L70 20 L70 140
+                   C55 142 45 145 40 148
+                   C35 165 45 185 70 195
+                   C95 185 105 165 100 148
+                   C95 145 85 142 70 140"/>
+        </svg>
+        <div class="tier-content">
+          <span class="tier-rank">Tier 1</span>
+          <h3 class="tier-name">Dirt Digger</h3>
+          <p class="tier-requirement">Join with the <strong>one-time $15 fee</strong></p>
+          <ul class="tier-perks">
+            <li>List and sell on Our Planty</li>
+            <li>Access to grower guides and resources</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="tier-card tier-2">
-        <span class="tier-rank">Tier 2</span>
-        <h3 class="tier-name">Petal Pusher</h3>
-        <p class="tier-requirement"><strong>5 completed sales</strong> or <strong>$150</strong> in lifetime sales</p>
-        <ul class="tier-perks">
-          <li>Everything in Dirt Digger</li>
-          <li>Featured in "New &amp; Notable Growers"</li>
-          <li>Reduced marketplace fee</li>
-        </ul>
+      <article class="tier-card">
+        <svg class="tier-watermark" viewBox="0 0 170 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M85 90
+                   C65 60 65 45 85 35
+                   C105 45 105 60 85 90
+                   C115 70 130 70 140 90
+                   C130 110 115 110 85 90
+                   C105 120 105 135 85 145
+                   C65 135 65 120 85 90
+                   C55 110 40 110 30 90
+                   C40 70 55 70 85 90
+                   C83 115 80 145 85 175"/>
+        </svg>
+        <div class="tier-content">
+          <span class="tier-rank">Tier 2</span>
+          <h3 class="tier-name">Petal Pusher</h3>
+          <p class="tier-requirement"><strong>5 completed sales</strong> or <strong>$150</strong> in lifetime sales</p>
+          <ul class="tier-perks">
+            <li>Everything in Dirt Digger</li>
+            <li>Featured in "New &amp; Notable Growers"</li>
+            <li>Reduced marketplace fee</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="tier-card tier-3">
-        <span class="tier-rank">Tier 3</span>
-        <h3 class="tier-name">Garden Giggler</h3>
-        <p class="tier-requirement"><strong>20 completed sales</strong> or <strong>$600</strong> in lifetime sales</p>
-        <ul class="tier-perks">
-          <li>Everything in Petal Pusher</li>
-          <li>Priority placement in search and browse</li>
-          <li>Invited to submit a Grower Spotlight story</li>
-        </ul>
+      <article class="tier-card">
+        <svg class="tier-watermark" viewBox="0 0 170 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 150
+                   L55 80
+                   L64 95 L70 84 L77 100
+                   L75 110
+                   L115 55
+                   L123 68 L130 58 L136 70
+                   L150 150"/>
+          <circle cx="140" cy="35" r="9"/>
+          <path d="M140 20 L140 14 M152 27 L157 23 M128 27 L123 23"/>
+        </svg>
+        <div class="tier-content">
+          <span class="tier-rank">Tier 3</span>
+          <h3 class="tier-name">Terra Titan</h3>
+          <p class="tier-requirement"><strong>20 completed sales</strong> or <strong>$600</strong> in lifetime sales</p>
+          <ul class="tier-perks">
+            <li>Everything in Petal Pusher</li>
+            <li>Priority placement in search and browse</li>
+            <li>Invited to submit a Grower Spotlight story</li>
+          </ul>
+        </div>
       </article>
 
-      <article class="tier-card tier-4">
-        <span class="tier-rank">Tier 4</span>
-        <h3 class="tier-name">Bloom Royalty</h3>
-        <p class="tier-requirement"><strong>60 completed sales</strong> or <strong>$2,000</strong> in lifetime sales, plus mentoring one newer grower</p>
-        <ul class="tier-perks">
-          <li>Everything in Garden Giggler</li>
-          <li>Lowest marketplace fee on Our Planty</li>
-          <li>Invited to co-host a workshop or Q&amp;A</li>
-          <li>Bloom Royalty badge on every listing</li>
-        </ul>
+      <article class="tier-card">
+        <svg class="tier-watermark" viewBox="0 0 180 155" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M35 145
+                   L20 90
+                   L60 60
+                   L80 100
+                   L90 45
+                   L100 100
+                   L120 60
+                   L160 90
+                   L145 145
+                   Z"/>
+          <circle cx="60" cy="57" r="4" fill="currentColor" stroke="none"/>
+          <circle cx="90" cy="34" r="5" fill="currentColor" stroke="none"/>
+          <circle cx="120" cy="57" r="4" fill="currentColor" stroke="none"/>
+        </svg>
+        <div class="tier-content">
+          <span class="tier-rank">Tier 4</span>
+          <h3 class="tier-name">Bloom Royalty</h3>
+          <p class="tier-requirement"><strong>60 completed sales</strong> or <strong>$2,000</strong> in lifetime sales, plus mentoring one newer grower</p>
+          <ul class="tier-perks">
+            <li>Everything in Terra Titan</li>
+            <li>Lowest marketplace fee on Our Planty</li>
+            <li>Invited to co-host a workshop or Q&amp;A</li>
+            <li>Bloom Royalty badge on every listing</li>
+          </ul>
+        </div>
       </article>
 
     </div>
 
-    <div class="status-note">
-      <span class="status-dot" aria-hidden="true"></span>
-      <p><strong>Your rank is yours for good.</strong> Once you reach a tier, you keep it. We also mark your shop <strong>Active</strong> if you've completed a sale in the past 12 months, so buyers can see who's currently growing and selling — a quiet season won't cost you your rank.</p>
-    </div>
   </section>
 
   <section class="closing membership-closing">
@@ -142,17 +183,10 @@
 
 <footer class="footer">
   <a href="https://ourplanty.com" aria-label="Our Planty" class="footer-logo-link">
-    <svg class="footer-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
-      <defs>
-        <linearGradient id="leafGrad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#4a6d51" />
-          <stop offset="100%" stop-color="#2a3d2e" />
-        </linearGradient>
-      </defs>
-      <path d="M25 45L30 85H70L75 45H25Z" fill="url(#leafGrad-footer)" />
-      <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="#F0F3F4" stroke-width="4" stroke-linecap="square"/>
-      <rect x="48" y="45" width="4" height="30" fill="#141B15" opacity="0.3"/>
-    </svg>
+    <svg class="footer-logo" viewBox="0 0 320 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Our Planty">
+        <polygon points="36,132 284,132 236,285 84,285" fill="#3D5A43"/>
+        <path d="M 62 135 C 65 25, 255 25, 258 135" stroke="#D9A05B" stroke-width="8" fill="none"/>
+      </svg>
   </a>
   <p class="footer-wordmark">Our Planty</p>
   <a href="https://mountainandseafoundation.org" class="footer-credit" target="_blank" rel="noopener">
@@ -163,7 +197,7 @@
     <a href="index.html#story">Our Story</a>
     <a href="index.html#mission">Mission &amp; Vision</a>
     <a href="index.html#help">Ways to Help</a>
-    <a href="membership.html" aria-current="page">Membership</a>
+    <a href="membership.html" aria-current="page">Membership Tiers</a>
     <a href="contact.html">Contact</a>
   </nav>
   <p class="footer-copy">&copy; <span id="year"></span> Our Planty. All rights reserved.</p>

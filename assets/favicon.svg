@@ -1,12 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="14" fill="#141B15"/>
-  <defs>
-    <linearGradient id="leafGrad-favicon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4a6d51" />
-      <stop offset="100%" stop-color="#2a3d2e" />
-    </linearGradient>
-  </defs>
-  <path d="M25 45L30 85H70L75 45H25Z" fill="url(#leafGrad-favicon)" />
-  <path d="M35 45V35C35 26.7157 41.7157 20 50 20C58.2843 20 65 26.7157 65 35V45" stroke="#F0F3F4" stroke-width="4" stroke-linecap="square"/>
-  <rect x="48" y="45" width="4" height="30" fill="#141B15" opacity="0.3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 330" fill="none">
+  <polygon points="36,132 284,132 236,285 84,285" fill="#3D5A43"/>
+  <path d="M 62 135 C 65 25, 255 25, 258 135" stroke="#D9A05B" stroke-width="14" fill="none"/>
 </svg>
