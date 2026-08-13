@@ -397,6 +397,7 @@ a{ color:inherit; }
   border:1px solid rgba(44,51,46,0.12);
   border-radius:8px;
   padding:32px;
+  box-shadow:0 1px 3px rgba(20,27,21,0.06);
   display:flex;
   flex-direction:column;
 }
@@ -445,6 +446,12 @@ a{ color:inherit; }
   font-size:0.95rem;
 }
 .support-link:hover{ text-decoration:underline; }
+.support-link-secondary{
+  display:block;
+  margin-top:8px;
+  color:var(--tool-steel);
+  font-weight:600;
+}
 
 @media (max-width:760px){
   .help-grid{ grid-template-columns:1fr; }
@@ -558,9 +565,6 @@ a{ color:inherit; }
 .contact-hero{ padding-bottom:clamp(56px, 8vw, 90px); }
 .contact-headline{ max-width:20ch; }
 
-.membership-hero-inner{ max-width:1100px; }
-.membership-headline{ max-width:none; }
-
 .contact-grid{
   display:grid;
   grid-template-columns:1.3fr 1fr;
@@ -647,13 +651,14 @@ a{ color:inherit; }
   border:1px solid rgba(44,51,46,0.12);
   border-radius:8px;
   padding:32px;
+  box-shadow:0 1px 3px rgba(20,27,21,0.06);
 }
 .contact-info-card.highlight{
   animation:card-highlight 1.6s ease;
 }
 @keyframes card-highlight{
   0%{ box-shadow:0 0 0 3px rgba(61,90,67,0.45); }
-  100%{ box-shadow:0 0 0 0 rgba(61,90,67,0); }
+  100%{ box-shadow:0 1px 3px rgba(20,27,21,0.06); }
 }
 .contact-info-card h3{
   font-family:var(--font-display);
@@ -741,76 +746,69 @@ a{ color:inherit; }
 .fee-callout .fee-amount{
   font-family:var(--font-display);
   font-weight:700;
-  font-size:1.7rem;
+  font-size:1.6rem;
   color:#976b34;
   flex-shrink:0;
 }
 .fee-callout p{
   margin:0;
   color:var(--tool-steel);
-  font-size:1.05rem;
+  font-size:0.95rem;
   max-width:34ch;
 }
 
-.tiers-sub{ margin-bottom:44px; font-size:1.12rem; }
+.tiers-sub{ margin-bottom:44px; }
 
 .tier-grid{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns:1fr;
   gap:20px;
   max-width:var(--max-width);
   margin:0 auto;
 }
 
+@media (min-width:640px){
+  .tier-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (min-width:980px){
+  .tier-grid{ grid-template-columns:repeat(4, 1fr); }
+}
+
 .tier-card{
   background:#FFFFFF;
   border:1px solid rgba(44,51,46,0.12);
+  border-left:4px solid var(--tier-accent, var(--growth-green));
   border-radius:8px;
-  padding:36px 32px;
-  text-align:center;
-}
-
-.tier-badge{
-  width:180px;
-  height:180px;
-  margin:4px auto 10px;
-}
-
-.tier-content{
+  padding:26px 24px;
   display:flex;
   flex-direction:column;
-  align-items:center;
   gap:12px;
-  max-width:520px;
-  margin:0 auto;
+  box-shadow:0 1px 3px rgba(20,27,21,0.06);
 }
 
-.tier-perks{
-  text-align:left;
-}
-
-@media (max-width:420px){
-  .tier-badge{ width:140px; height:140px; }
-}
+.tier-card.tier-1{ --tier-accent:#A9BFAD; --tier-accent-text:#657368; }
+.tier-card.tier-2{ --tier-accent:var(--growth-green-light); --tier-accent-text:var(--growth-green-light); }
+.tier-card.tier-3{ --tier-accent:var(--growth-green); --tier-accent-text:var(--growth-green); }
+.tier-card.tier-4{ --tier-accent:var(--brass-orange); --tier-accent-text:#8d683b; }
 
 .tier-rank{
-  font-size:0.82rem;
+  font-size:0.75rem;
   letter-spacing:0.14em;
   text-transform:uppercase;
   font-weight:700;
-  color:var(--growth-green);
+  color:var(--tier-accent-text, var(--brass-orange-dark));
 }
 
 .tier-name{
   font-family:var(--font-display);
   font-weight:600;
-  font-size:1.55rem;
+  font-size:1.3rem;
   color:var(--deep-forest);
   margin:0;
 }
 
 .tier-requirement{
-  font-size:1.05rem;
+  font-size:0.92rem;
   color:var(--tool-steel);
   margin:0;
 }
@@ -825,7 +823,7 @@ a{ color:inherit; }
   gap:8px;
 }
 .tier-perks li{
-  font-size:1rem;
+  font-size:0.9rem;
   line-height:1.5;
   color:var(--tool-steel);
   padding-left:20px;
@@ -839,8 +837,34 @@ a{ color:inherit; }
   width:7px;
   height:7px;
   border-radius:50%;
-  background:var(--growth-green);
+  background:var(--tier-accent, var(--brass-orange));
 }
+
+.status-note{
+  max-width:780px;
+  margin:44px auto 0;
+  background:var(--off-white-tint);
+  border-radius:10px;
+  padding:24px 26px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.status-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--growth-green);
+  margin-top:7px;
+  flex-shrink:0;
+}
+.status-note p{
+  margin:0;
+  color:var(--tool-steel);
+  font-size:0.94rem;
+  line-height:1.6;
+}
+.status-note strong{ color:var(--deep-forest); }
 
 /* ---------- reduced motion ---------- */
 
