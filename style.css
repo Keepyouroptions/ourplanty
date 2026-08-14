@@ -595,7 +595,8 @@ a{ color:inherit; }
 }
 
 .form-row input,
-.form-row textarea{
+.form-row textarea,
+.form-row select{
   font-family:var(--font-body);
   font-size:1rem;
   padding:12px 14px;
@@ -606,8 +607,20 @@ a{ color:inherit; }
   resize:vertical;
 }
 
+.form-row select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'><path d='M5.5 8L10 12.5L14.5 8' stroke='%232C332E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  background-size:16px;
+  padding-right:38px;
+  cursor:pointer;
+}
+
 .form-row input:focus,
-.form-row textarea:focus{
+.form-row textarea:focus,
+.form-row select:focus{
   outline:none;
   border-color:var(--growth-green);
   box-shadow:0 0 0 3px rgba(61,90,67,0.15);

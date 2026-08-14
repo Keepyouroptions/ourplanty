@@ -99,13 +99,16 @@ if (contactForm) {
 
     var name = document.getElementById('cf-name').value.trim();
     var email = document.getElementById('cf-email').value.trim();
+    var membershipField = document.getElementById('cf-membership');
+    var membership = membershipField ? membershipField.value : '';
     var subjectField = document.getElementById('cf-subject').value.trim();
     var message = document.getElementById('cf-message').value.trim();
 
-    var subject = subjectField || ('Message from ' + (name || 'the Our Planty site'));
+    var subject = subjectField || (membership ? membership + ' membership inquiry' : ('Message from ' + (name || 'the Our Planty site')));
     var bodyLines = [];
     if (name) bodyLines.push('Name: ' + name);
     if (email) bodyLines.push('Email: ' + email);
+    if (membership) bodyLines.push('Membership interest: ' + membership);
     bodyLines.push('');
     bodyLines.push(message);
 
