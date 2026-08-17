@@ -782,13 +782,15 @@ a{ color:inherit; }
   padding:32px 36px;
   position:relative;
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
 }
 
 .tier-watermark{
-  position:absolute;
-  right:56px;
-  top:50%;
-  transform:translateY(-50%);
+  order:2;
+  flex-shrink:0;
   width:128px;
   height:128px;
   color:var(--growth-green);
@@ -797,12 +799,14 @@ a{ color:inherit; }
 }
 
 .tier-content{
+  order:1;
   position:relative;
   z-index:1;
   display:flex;
   flex-direction:column;
   gap:12px;
   max-width:600px;
+  flex:0 1 600px;
 }
 
 .tier-name-row{
@@ -812,14 +816,22 @@ a{ color:inherit; }
 }
 
 @media (max-width:1000px){
-  .tier-watermark{
-    position:static;
+  .tier-card{
     display:block;
-    width:64px;
-    height:64px;
-    margin:2px auto 0;
-    opacity:0.35;
-    transform:none;
+    padding:28px 32px;
+  }
+  .tier-content{
+    max-width:none;
+    flex:none;
+    padding-right:56px; /* keep text clear of the corner badge */
+  }
+  .tier-watermark{
+    position:absolute;
+    top:28px;
+    right:32px;
+    width:44px;
+    height:44px;
+    opacity:1;
   }
 }
 
