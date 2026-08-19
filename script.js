@@ -12,6 +12,7 @@ if (toggle && menu) {
   toggle.addEventListener('click', function () {
     var isOpen = menu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   });
 
   // Close menu when a link is tapped
@@ -19,6 +20,7 @@ if (toggle && menu) {
     link.addEventListener('click', function () {
       menu.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
     });
   });
 }

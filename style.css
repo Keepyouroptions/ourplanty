@@ -1,4 +1,104 @@
 /* ============================================================
+   Self-hosted fonts (replaces Google Fonts CDN calls).
+   Loading fonts from fonts.googleapis.com/fonts.gstatic.com sends
+   every visitor's IP to Google at page-load with no consent gate —
+   hosting the files ourselves removes that third-party request.
+   ============================================================ */
+
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:800;
+  font-display:swap;
+  src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-500-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-600-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-700-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:800;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-800-normal.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-weight:500;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-500-italic.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-weight:600;
+  font-display:swap;
+  src:url('assets/fonts/playfair-display-latin-600-italic.woff2') format('woff2');
+}
+
+/* Visually hides content while keeping it in the accessibility tree —
+   used for headings needed to keep the document outline correct
+   (no heading-level skips) without changing the visual design. */
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* ============================================================
    Our Planty — design tokens
    Sampled + confirmed from the brand's own logo file & guide:
    --deep-forest  #141B15  near-black, footer / closing section
@@ -190,6 +290,12 @@ a{ color:inherit; }
   transition:opacity 0.15s ease;
 }
 .nav-links a:hover{ opacity:1; }
+.nav-links a.active,
+.mobile-menu a.active{
+  opacity:1;
+  color:var(--brass-orange);
+  font-weight:700;
+}
 
 .nav-cta{ padding:11px 22px; font-size:0.85rem; }
 
@@ -636,7 +742,7 @@ a{ color:inherit; }
 .form-note{
   font-size:0.85rem;
   line-height:1.6;
-  color:rgba(44,51,46,0.65);
+  color:rgba(44,51,46,0.82);
   margin:0;
 }
 .form-note strong{ color:var(--growth-green); }
@@ -668,7 +774,7 @@ a{ color:inherit; }
   0%{ box-shadow:0 0 0 3px rgba(61,90,67,0.45); }
   100%{ box-shadow:0 0 0 0 rgba(61,90,67,0); }
 }
-.contact-info-card h3{
+.contact-info-card h2{
   font-family:var(--font-display);
   font-weight:600;
   font-size:1.5rem;
@@ -782,15 +888,13 @@ a{ color:inherit; }
   padding:32px 36px;
   position:relative;
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:40px;
 }
 
 .tier-watermark{
-  order:2;
-  flex-shrink:0;
+  position:absolute;
+  right:56px;
+  top:50%;
+  transform:translateY(-50%);
   width:128px;
   height:128px;
   color:var(--growth-green);
@@ -799,14 +903,12 @@ a{ color:inherit; }
 }
 
 .tier-content{
-  order:1;
   position:relative;
   z-index:1;
   display:flex;
   flex-direction:column;
   gap:12px;
   max-width:600px;
-  flex:0 1 600px;
 }
 
 .tier-name-row{
@@ -815,24 +917,26 @@ a{ color:inherit; }
   gap:12px;
 }
 
+.tier-badge{
+  display:none;
+  flex-shrink:0;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--growth-green);
+  align-items:center;
+  justify-content:center;
+  color:#F0F3F4;
+}
+
+.tier-badge svg{
+  width:20px;
+  height:20px;
+}
+
 @media (max-width:1000px){
-  .tier-card{
-    display:block;
-    padding:28px 32px;
-  }
-  .tier-content{
-    max-width:none;
-    flex:none;
-    padding-right:56px; /* keep text clear of the corner badge */
-  }
-  .tier-watermark{
-    position:absolute;
-    top:28px;
-    right:32px;
-    width:44px;
-    height:44px;
-    opacity:1;
-  }
+  .tier-watermark{ display:none; }
+  .tier-badge{ display:inline-flex; }
 }
 
 .tier-rank{
@@ -888,6 +992,12 @@ a{ color:inherit; }
 
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
-  .btn{ transition:none; }
+  .btn,
+  .icon-chip,
+  .footer-logo-link,
+  .help-card-logo,
+  .hero-credit{
+    transition:none;
+  }
   .contact-info-card.highlight{ animation:none; box-shadow:0 0 0 3px rgba(61,90,67,0.45); }
 }
